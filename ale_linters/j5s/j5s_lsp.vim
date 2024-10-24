@@ -6,8 +6,8 @@ function! ale_linters#j5s#j5s_lsp#GetProjectRoot(buffer) abort
     return !empty(l:root_file) ? fnamemodify(l:root_file, ':h') : ''
 endfunction
 
-call ale#linter#Define('j5s', {
-\   'name': 'j5s_lsp',
+call ale#linter#Define('j5', {
+\   'name': 'j5_lsp',
 \   'lsp': 'stdio',
 \   'executable': {b -> ale#Var(b, 'j5_lsp_executable')},
 \   'command': '%e lsp',
